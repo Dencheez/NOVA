@@ -2,7 +2,7 @@ import { Navbar } from "../components"
 
 export const Header = () => {
     return (
-        <header className=" mt-5 mx-15" >
+        <header className=" mt-5" >
             <Navbar></Navbar>
         </header>
     )

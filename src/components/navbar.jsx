@@ -1,12 +1,13 @@
 import { SearchBtn, UserBtn, CartBtn } from "./button"
-import { useEffect } from "react"
-
+import { useEffect, useState } from "react"
+import { useCart } from "../context/CartContext"
 export const Navbar = () => {
 
+    const { cartCounter } = useCart();
 
     return (
         <>
-            <ul className="list-none flex items-center justify-between">
+            <ul className="list-none flex items-center justify-between mx-15">
                 <li>
                     <b>  <a href="#" className="text-2xl">NOVA</a></b>
                 </li>
@@ -40,9 +41,13 @@ export const Navbar = () => {
                             <UserBtn></UserBtn>
                         </a>
                     </li>
-                    <li>
-                        <a href="#"></a>
-                        <CartBtn></CartBtn>
+                    <li className="relative  ">
+                        <span className="absolute -top-2 -right-2 bg-black text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
+                            {cartCounter}
+                        </span>
+                        <a href="#"> <CartBtn></CartBtn></a>
+
+
                     </li>
                 </div>
             </ul>

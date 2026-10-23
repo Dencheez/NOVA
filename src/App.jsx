@@ -1,13 +1,18 @@
 import { Header, Banner, Main, Footer } from "./blocks";
 
+import { CartProvider } from "./context/CartContext"
+
 function App() {
   return (
-    <div className="">
-      <Header></Header>
-      <Banner></Banner>
-      <Main></Main>
-      <Footer></Footer>
-    </div>
+    <CartProvider>
+      <div className="">
+        <Header></Header>
+        <Banner></Banner>
+        <Main></Main>
+        <Footer></Footer>
+      </div>
+    </CartProvider>
+
   )
 
 }
