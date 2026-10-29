@@ -1,9 +1,9 @@
 import { SearchBtn, UserBtn, CartBtn } from "./button"
-import { useEffect, useState } from "react"
 import { useCart } from "../context/CartContext"
+
 export const Navbar = () => {
 
-    const { cartCounter } = useCart();
+    const { cartCounter, setModalCart } = useCart();
 
     return (
         <>
@@ -45,7 +45,7 @@ export const Navbar = () => {
                         <span className="absolute -top-2 -right-2 bg-black text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
                             {cartCounter}
                         </span>
-                        <a href="#"> <CartBtn></CartBtn></a>
+                        <CartBtn></CartBtn>
 
 
                     </li>

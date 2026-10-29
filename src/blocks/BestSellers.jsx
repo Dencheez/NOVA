@@ -1,10 +1,12 @@
 import mensImg from "../assets/mensImg.png"
 import { CartBtn, } from "../components/button"
 import { useCart } from "../context/CartContext"
-import { Star, MoveRight, ShoppingCart } from "lucide-react"
+import { Star, MoveRight, } from "lucide-react"
 
 export const BestSellers = () => {
+
     const { addToCart } = useCart();
+
     const sellersCard = [
         { id: 1, name: "Nike", title: "Nike Sneakers", price: "$4 000", rate: "4.8", img: mensImg, },
         { id: 2, name: "Nike", title: "Nike Sneakers", price: "$4 000", rate: "4.8", img: mensImg, },
@@ -15,7 +17,7 @@ export const BestSellers = () => {
         <div className="mt-10 mx-15">
             <div className="mx-16 flex justify-between items-end">
                 <div className="">
-                    <p className="text-gray-500">POPULAR RIGHT NOW</p>
+                    <p className="text-gray-500/50">POPULAR RIGHT NOW</p>
                     <h1 className="text-3xl"><strong>Best Sellers</strong></h1>
                 </div>
                 <button className="rounded-3xl border-gray-500/50 border-1 p-1 px-5 flex cursor-pointer">View all <MoveRight className="p-1 ml-2"></MoveRight> </button>
@@ -39,7 +41,7 @@ export const BestSellers = () => {
                             <button
                                 onClick={addToCart}
                                 className="text-white bg-black p-6
-                            w-5 h-5 rounded-lg flex justify-center items-center"><CartBtn ></CartBtn></button>
+                            w-5 h-5 rounded-lg flex justify-center items-center"><CartBtn></CartBtn></button>
                         </div>
                     </div>
                 ))}

@@ -5,7 +5,7 @@ export const Banner = () => {
         <div className="bg-linear-to-br from-[#F1EDEA] from-40% via-[#E3DED8] via-50% to-[#D1CCC6] to-100%  mt-5
                         flex justify-around items-center ">
             <div className="mt-15 mb-15">
-                <h2 className="text-lg">MOVE DIFFERENTLY</h2>
+                <h2 className="text-lg uppercase text-gray-500/70">move differently</h2>
 
                 <h1 className="text-8xl my-5"><b>Footwear <br />
                     for a Bolder <br />
