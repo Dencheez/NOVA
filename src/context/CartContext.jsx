@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useReducer } from "react";
 
 
 const CartContext = createContext();
@@ -8,6 +8,8 @@ export const CartProvider = ({ children }) => {
         const saved = localStorage.getItem("cartCounter")
         return saved ? Number(saved) : 0
     });
+
+    c
 
     const [modalCart, setModalCart] = useState(false);
 
@@ -23,7 +25,7 @@ export const CartProvider = ({ children }) => {
         <CartContext.Provider value={{ cartCounter, addToCart, modalCart, setModalCart }}>
             {children}
             {modalCart && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50">
                     <div className="bg-white p-8 rounded-lg shadow-lg">
                         <h2 className="text-2xl font-bold mb-4">Cart</h2>
                         <p className="mb-4">You have {cartCounter} items in your cart.</p>
