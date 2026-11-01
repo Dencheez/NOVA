@@ -20,7 +20,7 @@ export const CartProvider = ({ children }) => {
     }
 
     return (
-        <CartContext.Provider value={{ cartCounter, addToCart }}>
+        <CartContext.Provider value={{ cartCounter, addToCart, modalCart, setModalCart }}>
             {children}
             {modalCart && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
