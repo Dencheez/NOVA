@@ -9,7 +9,7 @@ export const CartProvider = ({ children }) => {
         return saved ? Number(saved) : 0
     });
 
-    c
+    
 
     const [modalCart, setModalCart] = useState(false);
 
