@@ -2,9 +2,9 @@ import {Star} from "lucide-react"
 
 export const CommentsBlock = () => {
     const comments = [
-        { id: 1, name: "John Doe", title:"Verified Buyer", comment: "Super comfortable and stylish, I wear them everywhere!", img: "../public/comm1.png" },
-        { id: 2, name: "Jane Smith",  title:"Verified Buyer",comment: "Beast sneakers I've owned. The quality is amazing.", img: "../public/comm2.png" },
-        { id: 3, name: "Mike Johnson", title:"Verified Buyer", comment: "Great fit and looks premium, Highly recommended!", img: "../public/comm3.png" },
+        { id: 1, name: "John Doe", title:"Verified Buyer", comment: "Super comfortable and stylish, I wear them everywhere!", img: "/comm1.png" },
+        { id: 2, name: "Jane Smith",  title:"Verified Buyer",comment: "Beast sneakers I've owned. The quality is amazing.", img: "/comm2.png" },
+        { id: 3, name: "Mike Johnson", title:"Verified Buyer", comment: "Great fit and looks premium, Highly recommended!", img: "/comm3.png" },
     ]
     
     return(

@@ -3,11 +3,11 @@ import {MoveRight} from "lucide-react"
 
 export const InstagramBlock = () => {
     const images = [
-        { id: 1, src: "../public/inst1.jpg", link:"https://www.instagram.com/p/DeyhVHOE_OG/?img_index=1" },
-        { id: 2, src: "../public/inst2.jpg", link:"https://www.instagram.com/p/DeyhVHOE_OG/?img_index=1" },
-        { id: 3, src: "../public/inst3.jpg", link:"https://www.instagram.com/p/DeyhVHOE_OG/?img_index=1" },
-        { id: 4, src: "../public/inst4.jpg", link:"https://www.instagram.com/p/DeyhVHOE_OG/?img_index=1" },
-        { id: 5, src: "../public/inst5.jpg", link:"https://www.instagram.com/p/DeyhVHOE_OG/?img_index=1" },
+        { id: 1, src: "/inst1.jpg", link:"https://www.instagram.com/p/DeyhVHOE_OG/?img_index=1" },
+        { id: 2, src: "/inst2.jpg", link:"https://www.instagram.com/p/DeyhVHOE_OG/?img_index=1" },
+        { id: 3, src: "/inst3.jpg", link:"https://www.instagram.com/p/DeyhVHOE_OG/?img_index=1" },
+        { id: 4, src: "/inst4.jpg", link:"https://www.instagram.com/p/DeyhVHOE_OG/?img_index=1" },
+        { id: 5, src: "/inst5.jpg", link:"https://www.instagram.com/p/DeyhVHOE_OG/?img_index=1" },
     ]
     return (
         <div className=" mb-10 mx-25">
