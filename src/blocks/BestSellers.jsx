@@ -39,9 +39,15 @@ export const BestSellers = () => {
                             </div>
 
                             <button
-                                onClick={addToCart}
-                                className="text-white bg-black p-6
-                            w-5 h-5 rounded-lg flex justify-center items-center"><CartBtn></CartBtn></button>
+                               onClick={() => addToCart({
+                    id: sellersCard.id,
+                    name: sellersCard.name,
+                    title: sellersCard.title,
+                    price: sellersCard.price,
+                    img: sellersCard.img
+                })}
+                className="text-white bg-black p-3 rounded-lg flex justify-center items-center cursor-pointer hover:bg-gray-800"
+            ><CartBtn></CartBtn></button>
                         </div>
                     </div>
                 ))}

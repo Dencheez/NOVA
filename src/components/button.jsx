@@ -1,6 +1,7 @@
 import { Search, User, ShoppingCart, MoveRight, X } from "lucide-react"
 import { useState } from "react"
-import { useCart } from "../context/CartContext" // подставьте свой путь к контексту
+import { useCart } from "../context/CartContext"
+ // подставьте свой путь к контексту
 
 export const SearchBtn = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,6 +43,7 @@ export const UserBtn = () => {
             <button className="cursor-pointer">
                 <User></User>
             </button>
+
         </>
     )
 
@@ -71,10 +73,8 @@ const { setModalCart } = useCart();
         <div className="static cursor-pointer">
 
 
-            <button id="card" className="cursor-pointer" onClick={() => setModalCart(true)}>
 
                 <ShoppingCart></ShoppingCart>
-            </button>
         </div>
     )
 

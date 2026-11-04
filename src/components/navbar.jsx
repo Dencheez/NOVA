@@ -3,7 +3,7 @@ import { useCart } from "../context/CartContext"
 
 export const Navbar = () => {
 
-    const { cartCounter, setModalCart } = useCart();
+    const { cartCounter,  } = useCart();
 
     return (
         <>
