@@ -3,7 +3,7 @@ import { useCart } from "../context/CartContext"
 
 export const Navbar = () => {
 
-    const { cartCounter,  } = useCart();
+    const { totalCount, setModalCart  } = useCart();
 
     return (
         <>
@@ -41,11 +41,11 @@ export const Navbar = () => {
                             <UserBtn></UserBtn>
                         </a>
                     </li>
-                    <li className="relative  ">
+                    <li className="relative  " onClick={() => setModalCart(true)}>
                         <span className="absolute -top-2 -right-2 bg-black text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
-                            {cartCounter}
+                            {totalCount}
                         </span>
-                        <CartBtn></CartBtn>
+                        <CartBtn ></CartBtn>
 
 
                     </li>

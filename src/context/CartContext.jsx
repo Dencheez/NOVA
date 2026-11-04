@@ -16,14 +16,18 @@ export const CartProvider = ({ children }) => {
 
     // Исправлено: добавлен аргумент product
     const addToCart = (product) => {
+        console.log("Adding to cart:", product.id); // Логирование для отладки
         setCartItems(prev => {
             const existingIndex = prev.findIndex(item => item.id === product.id);
 
             if (existingIndex > -1) {
-                const updated = [...prev];
-                updated[existingIndex].quantity += 1;
-                return updated;
-            } else {
+                return prev.map((item, index) =>
+                    index === existingIndex 
+                ? { ...item, quantity: item.quantity + 1 } 
+                : item
+    );
+            } 
+            else {
                 return [...prev, { ...product, quantity: 1 }];
             }
         });
