@@ -20,7 +20,7 @@ export const BestSellers = () => {
                     <p className="text-gray-500/50">POPULAR RIGHT NOW</p>
                     <h1 className="text-3xl"><strong>Best Sellers</strong></h1>
                 </div>
-                <button className="rounded-3xl border-gray-500/50 border-1 p-1 px-5 flex cursor-pointer">View all <MoveRight className="p-1 ml-2"></MoveRight> </button>
+                <button className="rounded-3xl border-gray-500/50 border p-1 px-5 flex cursor-pointer">View all <MoveRight className="p-1 ml-2"></MoveRight> </button>
             </div>
             <div className=" flex mt-5 justify-center mx-10">
 
@@ -44,7 +44,7 @@ export const BestSellers = () => {
                     name: sellersCard.name,
                     title: sellersCard.title,
                     price: sellersCard.price,
-                    img: sellersCard.img
+                    image: sellersCard.img
                 })}
                 className="text-white bg-black p-3 rounded-lg flex justify-center items-center cursor-pointer hover:bg-gray-800"
             ><CartBtn></CartBtn></button>

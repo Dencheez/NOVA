@@ -14,26 +14,22 @@ export const CartProvider = ({ children }) => {
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }, [cartItems]);
 
-    // Исправлено: добавлен аргумент product
     const addToCart = (product) => {
-        console.log("Adding to cart:", product.id); // Логирование для отладки
         setCartItems(prev => {
             const existingIndex = prev.findIndex(item => item.id === product.id);
 
             if (existingIndex > -1) {
                 return prev.map((item, index) =>
                     index === existingIndex 
-                ? { ...item, quantity: item.quantity + 1 } 
-                : item
-    );
-            } 
-            else {
+                        ? { ...item, quantity: item.quantity + 1 } 
+                        : item
+                );
+            } else {
                 return [...prev, { ...product, quantity: 1 }];
             }
         });
     };
 
-    // Исправлено: аргумент назван productId, а не id
     const removeFromCart = (productId) => {
         setCartItems(prev => prev.filter(item => item.id !== productId));
     };
@@ -52,24 +48,8 @@ export const CartProvider = ({ children }) => {
             }}
         >
             {children}
-
-            {/* Возвращенный кусок модалки */}
-            {modalCart && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50">
-                    <div className="bg-white p-8 rounded-lg shadow-lg">
-                        <h2 className="text-2xl font-bold mb-4">Cart</h2>
-                        <p className="mb-4">You have {totalCount} items in your cart.</p>
-                        <button
-                            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                            onClick={() => setModalCart(false)}
-                        >
-                            Close
-                        </button>
-                    </div>
-                </div>
-            )}
         </CartContext.Provider>
     );
-}
+};
 
 export const useCart = () => useContext(CartContext);
