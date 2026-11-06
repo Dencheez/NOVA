@@ -14,7 +14,7 @@ export const BestSellers = () => {
         { id: 4, name: "Nike", title: "Nike Sneakers", price: "$4 000", rate: "4.8", img: mensImg, },
     ]
     return (
-        <div className="mt-10 mx-15">
+        <div className="mt-10 mx-15" id="bestSellers">
             <div className="mx-16 flex justify-between items-end">
                 <div className="">
                     <p className="text-gray-500/50">POPULAR RIGHT NOW</p>

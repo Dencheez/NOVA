@@ -3,7 +3,7 @@ import { MenBannerBtn, WomenBannerBtn } from "../components/button"
 
 export const UnderSell = () => {
     return (
-        <div className="flex justify-center gap-4 mb-15">
+        <div className="flex justify-center gap-4 mb-15" id="about">
             <div className="w-[668px] relative">
                 <div className="z-1 absolute top-15 left-5">
                     <h2 className="uppercase text-5xl text-white"> <b>Build for <br /> real life</b></h2>

@@ -1,4 +1,5 @@
 import { useCart } from "../context/CartContext";
+import {Trash, X} from "lucide-react"
 
 export const CartModal = () => {
     const { cartItems, removeFromCart, modalCart, setModalCart } = useCart();
@@ -16,7 +17,7 @@ export const CartModal = () => {
                             onClick={() => setModalCart(false)}
                             className="text-gray-500 hover:text-black font-bold text-xl cursor-pointer"
                         >
-                            ✕
+                            <X />
                         </button>
                     </div>
 
@@ -29,7 +30,7 @@ export const CartModal = () => {
                             {cartItems.map((item) => (
                                 <div 
                                     key={item.id} 
-                                    className="flex items-center gap-4 border p-3 rounded-lg shadow-sm bg-white"
+                                    className="flex items-center gap-4 border border-gray-300 p-3 rounded-lg bg-white"
                                 >
                                     {/* Фото товара */}
                                     <img 
@@ -47,23 +48,15 @@ export const CartModal = () => {
                                     {/* Кнопка удаления */}
                                     <button 
                                         onClick={() => removeFromCart(item.id)}
-                                        className="text-red-500 hover:text-red-700 text-sm p-1 cursor-pointer font-medium"
+                                        className="text-gray-500 hover:text-red-700 text-sm p-1 cursor-pointer font-medium"
                                     >
-                                        Удалить
+                                        <Trash />
                                     </button>
                                 </div>
                             ))}
                         </div>
                     )}
                 </div>
-
-                {/* Кнопка закрытия внизу */}
-                <button 
-                    onClick={() => setModalCart(false)}
-                    className="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 mt-6 cursor-pointer"
-                >
-                    Закрыть
-                </button>
             </div>
         </div>
     );
